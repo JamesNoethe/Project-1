@@ -2,12 +2,12 @@
  .bothplayers{
     position: relative;
     bottom: 200px;
-    border: solid black 2px;
+    /* border: solid black 2px; */
  }
  .player2grid{
     position: relative;
     bottom: 823px;
-    left: 600px;
+    left: 1200px;
  }
   .theSide2{
     position: relative;

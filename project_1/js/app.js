@@ -1,101 +1,79 @@
 const play = {
 playerAllHit: 0,
-botAllHit: 0,
 player: 1
 }
-const ship = document.querySelector(".ship")
+const botPlay = {
+  botAllHit: 0,    
+}
+
 // const empty = document.querySelector(".emptybot")
 // const hit = document.querySelector(".pendinghitbot")
 
 function gridClickBot(botPosition){
+      const ship = document.querySelectorAll(".ship")
     const botMiss = document.querySelector(`.emptybot${botPosition}`)
     const botHit = document.querySelector(`.pendinghitbot${botPosition}`)
    console.log("position", botPosition)
     console.log("ship position",botBoard[botPosition])
 let botBoardPosition = botBoard[botPosition]
-changeCss(botBoardPosition, botHit, botMiss, ship)
+changeCss2(botBoardPosition, botHit, botMiss, ship)
 }
-function changeCss(botBoardPosition, botHit, botMiss, ship){
+function changeCss2(botBoardPosition, botHit, botMiss, ship){
 if(play.player === 1){
-    return 
+    gridClick();
 }else{if(botBoardPosition === 2){
     botHit.className = "hit"
-    play.botAllHit++
-    // play.player++
+    botPlay.botAllHit++
+    play.player++
+    console.log(botPlay.botAllHit, "bot hit")
     console.log(play.player)
 }else if(botBoardPosition === 0){
     botMiss.className = "miss"
-    play.botAllHit++
-    // play.player++
+    play.player++
 }}
-if(play.botAllHit === 17){
-    alert("Bot wins")
-    ship.className = ""
-  }
+if(botPlay.botAllHit === 17){
+      alert("Bot wins")
+      ship.className = "gray"
+    }
 }
+// function win(){
+//    if(botPlay.botAllHit === 17){
+//     alert("Bot wins")
+//     ship.className = "gray"
+//   }else if(play.playerAllHit === 17){
+//     ship.className = "gray"
+// alert("Player wins")
+//   }  
+// }
 ///// This isplayer one
 function gridClick(position) {
+      const ship = document.querySelectorAll(".ship")
 const theHit = document.querySelector(`.pendinghit${position}`)
 const theMiss = document.querySelector(`.empty${position}`)
 console.log("position", position)
-    // const click = gridClick.onClick
-    // console.log(click)
 let boardPosition = board[position]
 changeCss(boardPosition, theHit, theMiss, ship)
 console.log("ship Points", boardPosition)
-// console.log("grid was clicked")
 }
 function changeCss(boardPosition, theHit, theMiss, ship) {
-  if(play.player === 0){
-        return
-  }else{ if(boardPosition === 2){
-        theHit.className = "hit"
-        play.playerAllHit++
-        // play.player--
-              console.log(play.botAllHit)
-              console.log(play.playerAllHit)
-  }else if(boardPosition === 0){
-        theMiss.className = "miss"
-        // play.player--
-  }}
-  if(play.playerAllHit === 17){
-        ship.className = "gray"
-        alert("Player wins")
-  }
+if(play.player === 0){
+      return
+}else{ if(boardPosition === 2){
+    theHit.className = "hit"
+    play.playerAllHit++
+        play.player--
+              console.log(play.player)
+              console.log(play.botAllHit, "bot hits")
+              console.log(play.playerAllHit, "player hits")
+}else if(boardPosition === 0){
+    theMiss.className = "miss"
+    play.player--
+}}
+if(play.playerAllHit === 17){
+      ship.className = "gray"
+  alert("Player wins")
+    }
 }
-
-// function gridClick(position) {
-//       const theHit = document.querySelector(`.pendinghit${position}`)
-//       const theMiss = document.querySelector(`.empty${position}`)
-//       console.log("position", position)
-//           // const click = gridClick.onClick
-//           // console.log(click)
-//       let boardPosition = board[position]
-//       changeCss(boardPosition, theHit, theMiss, ship)
-//       console.log("ship Points", boardPosition)
-//       // console.log("grid was clicked")
-//       }
-//       function changeCss(boardPosition, theHit, theMiss, ship) {
-//         if(play.player === 0){
-//               return
-//         }else{ if(boardPosition === 2){
-//               theHit.className = "hit"
-//               play.playerAllHit++
-//               // play.player--
-//               console.log(play.playerAllHit)
-//         }else if(boardPosition === 0){
-//               theMiss.className = "miss"
-//               // play.player--
-//         }}
-//         if(play.playerAllHit === 17){
-//           // ship.forEach(s => {
-//           //     s.className("gray")
-//               ship.className = "gray"
-//               alert("Player wins")
-      
-//         }
-//       }
-
 // function botChoce(){
 
 // }
@@ -125,8 +103,8 @@ let botBoard = [
 0, 2, 0, 0, 0, 0, 0, 0, 0, 0,
 0, 2, 0, 0, 0, 2, 2, 2, 0, 0]
 
-let tile = botBoard[Math.floor(Math.random()*botBoard.length)];
-console.log(tile)
+// let tile = botBoard[Math.floor(Math.random()*botBoard.length)];
+// console.log(tile)
 
 // function botGrid() {
 //       for (var i = 0; i < botBoard.length; i++) {
