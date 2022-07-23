@@ -1,14 +1,29 @@
-
+.thebackground{
+    position: relative;
+    width: 1900px;
+    height: 900px;
+}
+.thewin{
+    position: relative;
+    left: 490px;
+    bottom: 500px;
+}
  .bothplayers{
     position: relative;
-    bottom: 200px;
+    bottom: 1100px;
     /* border: solid black 2px; */
  }
- .player2grid{
+ .bothplayers2{
+    position: relative;
+    bottom: 1286px;
+    left: 2000;
+ }
+ .player2grid1{
     position: relative;
     bottom: 823px;
-    left: 1200px;
+    left: 1000px;
  }
+
   .theSide2{
     position: relative;
     display: flex;
@@ -21,11 +36,13 @@
     position: relative;
     height: 40px;
     font-size: 20px;
+    color: white;
 }
  .theTop2 div {
     position: relative;
     width: 39.5px;
     font-size: 20px;
+    color: white;
   }
 .theTop2{
     position: relative;
@@ -51,6 +68,7 @@
    position: relative;
    height: 39.5px;
    font-size: 20px;
+   color: white;
  }
  .theTop1{
     position: relative;
@@ -64,18 +82,13 @@
     position: relative;
     width: 39.5px;
     font-size: 20px;
+    color: white;
   }
 .reset{
     position: relative;
     bottom: 600px;
     left: 500px;
 }
-
-/* img{
-    width: 450px;
-    height: 450px;
-    transform: scale();
-} */
 body {
     width: 70%;
     height: 30px;
@@ -110,7 +123,4 @@ body {
     position: relative;
     top: 00px;
     left: 80px;
-}
-.grid2{
-
 }
