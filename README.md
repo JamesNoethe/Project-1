@@ -9,5 +9,7 @@ initially I'm going to try to make this just basic CSS but once I get the JavaSc
 ![22f1a987-c2fb-42de-a2be-8ae8f69a2113](https://user-images.githubusercontent.com/86137308/180894595-e577c484-bee5-4c1f-b893-76ccb704d4f2.png)
 
 MVP Goals. Making a game that goes back and forth between two players
+
 MVP Goals. When one of the players wins I want an image to display in the center
+
 MVP Goals. I'm struggling with using and understanding CSS. I'd like to be better at using CSS by the end of this Project 1
